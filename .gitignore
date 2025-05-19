@@ -1,0 +1,4 @@
+# Ignore .env and secret/config files
+.env
+k8s/secret.yaml
+k8s/configmap.yaml

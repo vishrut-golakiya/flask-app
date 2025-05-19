@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-config
+  namespace: flask-app
+data:
+  AWS_REGION: us-east-1
+  S3_BUCKET: pyflaskapp
+  SQS_QUEUE_URL: https://sqs.us-east-1.amazonaws.com/219609271406/flask-app
+  DB_HOST: mysql-service
+  DB_NAME: users

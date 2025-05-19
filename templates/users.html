@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Users</title>
+</head>
+<body>
+    <h2>Uploaded Users</h2>
+    {% for user in users %}
+        <div style="margin-bottom: 20px;">
+            <p><strong>Name:</strong> {{ user.name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>About:</strong> {{ user.about }}</p>
+            <img src="https://{{ bucket }}.s3.amazonaws.com/{{ user.photo_path }}" 
+                 alt="User Image" width="200"/>
+        </div>
+        <hr>
+    {% endfor %}
+    <a href="{{ url_for('index') }}">Upload another</a>
+</body>
+</html>
