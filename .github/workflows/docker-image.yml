@@ -22,5 +22,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag vishrut0/project:app
 
-    - name: Push the Docker image
+    - name: Push the Docker
       run: docker push vishrut0/project:app
